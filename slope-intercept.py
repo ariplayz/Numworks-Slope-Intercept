@@ -15,7 +15,7 @@ def main():
 
     # Check if the line is vertical
     if x1 == x2:
-        print(f"The line is vertical with x = {x1}.")
+        print("The line is vertical with x = " + str(x1) + ".")
         return
 
     # Calculate slope
@@ -25,9 +25,9 @@ def main():
     intercept = y1 - slope * x1
 
     # Display results
-    print(f"Slope (m): {slope}")
-    print(f"Y-Intercept (b): {intercept}")
-    print(f"Equation of the line: y = {slope}x + {intercept}")
+    print("Slope (m): " + str(slope))
+    print("Y-Intercept (b): " + str(intercept))
+    print("Equation of the line: y = " + str(slope) + "x + " + str(intercept))
 
 # Run the program
 main()
