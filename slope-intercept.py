@@ -24,10 +24,27 @@ def main():
     # Calculate y-intercept (b = y - mx)
     intercept = y1 - slope * x1
 
+    # Calculate coefficients for standard form Ax + By = C
+    # Rearrange y = mx + b to mx - y + b = 0, then multiply by -1 to get Ax + By = C
+    A = -slope
+    B = 1
+    C = intercept
+
+    # If A is negative, normalize it to be positive
+    if A < 0:
+        A = -A
+        B = -B
+        C = -C
+
     # Display results
-    print("Slope (m): " + str(slope))
-    print("Y-Intercept (b): " + str(intercept))
-    print("Equation of the line: y = " + str(slope) + "x + " + str(intercept))
+    print("Slope (m):")
+    print(slope)
+    print("Y-Intercept (b):")
+    print(intercept)
+    print("Slope-Intercept Form:")
+    print("y = " + str(slope) + "x + " + str(intercept))
+    print("Standard Form:")
+    print(str(A) + "x + " + str(B) + "y = " + str(C))
 
 # Run the program
 main()
